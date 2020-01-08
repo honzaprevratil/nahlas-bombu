@@ -98,6 +98,11 @@ body {
         font-weight: 400;
         color: $color-blue;
       }
+
+      article {
+        max-width: 600px;
+        padding: 10px;
+      }
     }
 
     &.reviews {
