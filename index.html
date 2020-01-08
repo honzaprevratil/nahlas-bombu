@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>NahlašBombu.cz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+<main>
+    <header>
+        <a href="/"><img class="logo" src="images/logo.svg" alt="logo" /></a>
+        <a href="/"><h1 class="name">NahlašBombu.cz</h1></a>
+        <img class="logo hidden" src="images/logo.svg" alt="logo" />
+    </header>
+    <section class="about">
+        <h2 class="title">O nás</h2>
+        <div class="content">
+            <article>
+                <h3>ANONYMNĚ</h3>
+                <span>Využíváme nejmodernějších kryptovaích technologií</span>
+            </article>
+            <article>
+                <h3>RYCHLE</h3>
+                <span>Díky technologii Blockchain vše probíhá instantně</span>
+            </article>
+            <article>
+                <h3>BEZPEČNĚ</h3>
+                <span>Vaše studium již nebude v ohrožení</span>
+            </article>
+        </div>
+    </section>
+    <section class="reviews">
+        <h2 class="title">Recenze</h2>
+        <div class="content">
+            <div class="message">
+                <div class="person">
+                    <img class="photo" src="images/people/person1.jpg" alt="osoba" />
+                    <span class="name">Jana</span>
+                </div>
+                <div class="text">
+                    Statistika mi nidky nešla, neučila jsem se a chodila pařit, než mě vyhodili. Takto jsem alespoň mohla zkazit den ostatním studentům. Díky
+                    NahlašBombu.cz za rychlé a bezproblémové jednání!
+                </div>
+            </div>
+            <div class="message">
+                <div class="person">
+                    <img class="photo" src="images/people/person2.jpg" alt="osoba" />
+                    <span class="name">Lukáš</span>
+                </div>
+                <div class="text">
+                    Již od mala jsem byl velký fanoušek hry Counter Strike, tak jsem si chtěl zkusit plantnout bombu i v reálném životě. Nechtěl jsem ale nikoho
+                    zranit, tak jse ji alespoň jen nahlásil. Díky moc!
+                </div>
+            </div>
+            <div class="message">
+                <div class="person">
+                    <img class="photo" src="images/people/person3.jpg" alt="osoba" />
+                    <span class="name">Dan</span>
+                </div>
+                <div class="text">
+                    Všichni ostatní hlásí bomby, tak jsem si to taky chtěl zkusit. Nedošlo mi ale, že to vyšlo do termínu zkoušky mým kamarádům. Od té doby mě
+                    nenazvou jinak než "debile".
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="report">
+        <h2 class="title">Objednávka</h2>
+        <div class="content">
+            <div class="form">
+                <div class="row schools">
+                    <div class="school selected" id="school-vse">
+                        <img class="logo" src="images/logo/vse.jpg" alt="vse" />
+                    </div>
+                    <div class="school" id="school-cvut">
+                        <img class="logo" src="images/logo/cvut.jpg" alt="cvut" />
+                    </div>
+                </div>
+                <div class="row">
+                    <label>
+                        <span>Datum</span>
+                        <input type="text" pattern="(0?[1-9]|[12][0-9]|3[01])\.(0?[1-9]|1[0-2])\.20[0-9]{2}" placeholder="31.2.2023" />
+                    </label>
+                </div>
+                <div class="row">
+                    <span>Cena: <b>0.003 BTC</b></span>
+                </div>
+                <div class="row">
+                    <button id="button">Nahlásit bombu</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="dialog" id="dialog">
+        <img src="images/qr.png" alt="qr" />
+        <a href="bitcoin:3Erd2hdUetAai3wy1gC8ht3Tb2MVUfS3Cz?amount=0.003">3Erd2hdUetAai3wy1gC8ht3Tb2MVUfS3Cz</a>
+    </div>
+</main>
+<script src="scripts/main.js"></script>
+</body>
+</html>

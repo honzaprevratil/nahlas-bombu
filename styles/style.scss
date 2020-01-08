@@ -1,0 +1,283 @@
+$color-blue: #081d3c;
+$color-yellow: #ffc400;
+$color-white: #FBFEF9;
+$header-height: 85px;
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&display=swap&subset=latin-ext');
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  margin: auto;
+  font-weight: 200;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 200;
+  width: 100%;
+  overflow-y: scroll;
+  margin: 0;
+  background: $color-white url(../images/background.svg) no-repeat fixed 0 85px;
+  background-size: 100%;
+}
+
+
+body {
+  margin: 0;
+
+  header {
+    z-index: 100;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 85px;
+    padding: 10px 15px;
+    text-align: center;
+    background: $color-yellow;
+    border-bottom: 2px solid $color-blue;
+
+    a {
+      display: block;
+      text-decoration: none;
+    }
+
+    .logo {
+      height: 50px;
+      width: 50px;
+
+      @media screen and (max-width: 400px) {
+        display: none;
+      }
+
+      &.hidden {
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
+    .name {
+      color: $color-blue;
+    }
+  }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-weight: 400;
+      color: $color-blue;
+    }
+
+    .content {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &.about {
+      text-align: center;
+
+      h3 {
+        font-weight: 400;
+        color: $color-blue;
+      }
+    }
+
+    &.reviews {
+      .message {
+        display: flex;
+        flex-direction: row;
+        margin-right: 40px;
+
+        &:nth-child(2n) {
+          flex-direction: row-reverse;
+          margin-left: 40px;
+          margin-right: 0;
+
+          .text {
+            &:after {
+              left: unset;
+              right: -10px;
+              border-right: unset;
+              border-left: 10px solid $color-blue;
+            }
+          }
+        }
+
+        .person {
+          .photo {
+            display: block;
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+          }
+
+          .name {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: .8rem;
+            color: $color-blue;
+          }
+        }
+
+        .text {
+          position: relative;
+          display: block;
+          height: min-content;
+          max-width: 250px;
+          min-height: 100px;
+          padding: 10px;
+          margin: 28px 15px 15px;
+          background: $color-white;
+          border-radius: 10px;
+          border: 2px solid $color-yellow;
+          box-shadow: 0 0 2px $color-yellow;
+          font-size: .9rem;
+
+          &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: -10px;
+            top: 10px;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid $color-yellow;
+          }
+        }
+      }
+    }
+
+    &.report {
+      .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        max-width: 600px;
+        background: $color-white;
+        border-radius: 10px;
+        border: 2px solid $color-yellow;
+        box-shadow: 0 0 2px $color-yellow;
+        padding: 20px;
+        text-align: center;
+
+        .row {
+          padding: 10px;
+
+          &.schools {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+          }
+        }
+
+        .school {
+          max-width: calc((100% - 34px) / 2);
+          display: inline-block;
+          text-align: center;
+
+          &.selected {
+            .logo {
+              border: 2px dashed $color-yellow;
+            }
+          }
+
+          .logo {
+            border-radius: 50%;
+            max-width: 70%;
+          }
+
+          span {
+            display: block;
+            text-align: center;
+          }
+        }
+
+        span {
+          font-size: .9rem;
+        }
+
+        input {
+          padding: 10px;
+          width: 200px;
+          border: none;
+          border-bottom: 2px solid $color-blue;
+          color: $color-blue;
+          background: $color-yellow;
+          text-align: center;
+          border-radius: 0;
+          font-size: 18px;
+        }
+
+        button {
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-radius: 3px;
+          background: $color-blue;
+          color: $color-yellow;
+          transition: all .3s ease;
+
+          &:hover {
+            background: $color-yellow;
+            color: $color-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .dialog {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-blue;
+
+    &.visible {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 100%;
+      max-width: 512px;
+    }
+
+    a {
+      padding: 10px;
+      color: $color-yellow;
+      text-decoration: none;
+    }
+  }
+}
