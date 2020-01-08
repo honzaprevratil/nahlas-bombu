@@ -250,6 +250,14 @@ body {
     }
   }
 
+  .link {
+    font-size: .9rem;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    color: $color-blue;
+  }
+
   .dialog {
     display: none;
     position: fixed;
