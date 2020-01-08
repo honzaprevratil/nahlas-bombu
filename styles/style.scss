@@ -116,7 +116,7 @@ body {
               left: unset;
               right: -10px;
               border-right: unset;
-              border-left: 10px solid $color-blue;
+              border-left: 10px solid $color-yellow;
             }
           }
         }
@@ -225,7 +225,7 @@ body {
           color: $color-blue;
           background: $color-yellow;
           text-align: center;
-          border-radius: 0;
+          border-radius: 4px;
           font-size: 18px;
         }
 
@@ -250,12 +250,15 @@ body {
     }
   }
 
-  .link {
+  footer {
     font-size: .9rem;
-    padding: 10px;
     text-align: center;
-    display: block;
-    color: $color-blue;
+
+    .link {
+      padding: 10px;
+      display: block;
+      color: $color-blue;
+    }
   }
 
   .dialog {
